@@ -54,9 +54,9 @@ test_set= test_datagen.flow_from_directory(
         class_mode='binary')
 
 classifier.fit_generator(
-        'C://Users//Shriyashish Mishra//Desktop//ml//dataset//training_set',
+        training_set,
         samples_per_epoch=8000,
         nb_epoch=25,
-        validation_data='C://Users//Shriyashish Mishra//Desktop//ml//dataset//test_set',
+        validation_data=test_set,
         nb_val_samples=2000)
 
