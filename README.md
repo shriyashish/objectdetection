@@ -12,12 +12,13 @@ Summary of steps that we follow:
 1. **Convolution:**
 
 To the input image, we apply feature detectors/Kernel/filters that allow to delete all the unnecessary details and give a proper feature map that provides all the important features to be classified and/or modified. This is how it&#39;s done:
-
+ ![convolution](https://user-images.githubusercontent.com/62511046/84712471-4cf7ad00-af86-11ea-92a6-ea3cacab3403.png)
 We move up and down the input image and feature detector is applied on each 3\*3 matrix that we obtain giving us a net result as a Feature Map.The movement of the feature detector on the image is called stride.
+![stride](https://user-images.githubusercontent.com/62511046/84746049-0a0ff680-afd3-11ea-9d88-9b7826b4c3bd.png)
 
 The Feature Maps are compressed versions of the input images. Since we do lose some information while compressing it, it&#39;s also important that the elements in the feature map are integral. Elements that are important enough to detect or recognise the object.
  Applying several filters on the input image, we get several Feature Maps.
- ![convolution](https://user-images.githubusercontent.com/62511046/84712471-4cf7ad00-af86-11ea-92a6-ea3cacab3403.png)
+
 
 **ReLU Layer:**
  All input images have several non linear elements such as different colours, borders, transitions between pixels, etc. And we need to keep maintaining the nonlinearity of the image. But by applying filters, we get some linearity in the resultant image and hence we apply ReLU(Rectified Linear Unit) to remove linearity. It&#39;s an activation function for the outputs of the CNN neurons where the gradient is always high.
