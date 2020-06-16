@@ -23,6 +23,8 @@ The Feature Maps are compressed versions of the input images. Since we do lose s
 **ReLU Layer:**
  All input images have several non linear elements such as different colours, borders, transitions between pixels, etc. And we need to keep maintaining the nonlinearity of the image. But by applying filters, we get some linearity in the resultant image and hence we apply ReLU(Rectified Linear Unit) to remove linearity. It&#39;s an activation function for the outputs of the CNN neurons where the gradient is always high.
 
+![relu](https://user-images.githubusercontent.com/62511046/84746482-a33f0d00-afd3-11ea-8bfd-a4712a67b3e5.png)
+
 1. **Pooling:**
 
 This is done to enhance the spatial invariance in our images, i.e, it:
@@ -33,16 +35,22 @@ This is done to enhance the spatial invariance in our images, i.e, it:
 
 It&#39;s like a filter that goes through the feature maps summarising the features.
  There are several types of pooling such as mean pooling, max pooling, sum pooling and so on. The one I prefer is the max pooling. It gives the maximum element from each region of the Feature Map on which the max pooling is done. The following is an example:
+ 
+ ![pooling](https://user-images.githubusercontent.com/62511046/84746602-d97c8c80-afd3-11ea-9a59-6b1131dc8c33.png)
+
 
 **3. Flattening:**
 
 After Pooling is done, all the images are flattened to get a long vector or column of values into an ANN. So, basically just take the numbers row by row, and put them into this one long column. For example:
+![flattening cnn](https://user-images.githubusercontent.com/62511046/84746878-2fe9cb00-afd4-11ea-9455-4d26b843c026.png)
+
 
 **4. Full Connection:**
 
 Once the flattening is done, the flattened layer behaves as the input layer, we have the fully connected layers which are the hidden layers of CNN and we have the output layer:
 
 The main aim to do so is to make more attributes that describe the classes (x and y) better. When the predictions are made whether it&#39;s x or y, we find errors which are called the loss function and that&#39;s when we come across a cross entropy function that minimizes the loss function in order to maximize the performance of our network. There are several types of errors such as classification error, mean square error, cross entropy error and so on.
+![full cnn](https://user-images.githubusercontent.com/62511046/84747005-590a5b80-afd4-11ea-9524-a0578881fcd2.png)
 
 The process involves forward and backward propagation leading to many iterations and epox and in the end we have a fully connected Neural Network- CNN that recognizes images and classifies them.
 
