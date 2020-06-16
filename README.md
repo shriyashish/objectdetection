@@ -7,6 +7,7 @@ This is a summary compilation of Object Localization using Convolutional Neural 
 Object Localization in layman terms means locating what we&#39;re looking for by detecting all the objects and background in the image.
 
 Summary of steps that we follow:
+![cnn](https://user-images.githubusercontent.com/62511046/84745383-19db0b00-afd2-11ea-9240-4266064d2c87.png)
 
 1. **Convolution:**
 
